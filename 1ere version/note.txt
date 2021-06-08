@@ -1,0 +1,11 @@
+I. Exigences
+
+Pour réaliser un ssh sans mot de passe entre les hôtes, vous devez générer des clés RSA et transférer la clé publique au serveur auquel vous voulez vous connecter.
+
+1. Générer les clés
+ssh-keygen -t rsa
+
+2. Transférez la clé au serveur distant
+ssh-copy-id -i ~/.ssh/id_rsa.pub 'username@remote-host' (nom d'utilisateur)
+
+
